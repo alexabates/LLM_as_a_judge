@@ -37,5 +37,6 @@ This project scrapes the full content and publication date of political news art
 `Extracted_Keywords.json`
 - A JSON file containing:
     - title: article title
+    - idx: article index
     - publish_date: same as from the original article
     - keywords: a list of 5 significant keywords relevant to the article's content
