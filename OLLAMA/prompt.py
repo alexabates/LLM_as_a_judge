@@ -16,7 +16,7 @@ for idx, article in enumerate(articles):
         print(f"⚠️ Skipping article {idx+1} (no content)")
         continue
 
-    print(f"🔍 Extracting keywords from: {title[:50]}...")
+    print(f"Extracting keywords from: {title[:50]}...")
 
     prompt = f"""Extract the 5 most important keywords from the following news article. 
     Return the keywords as a JSON list of strings.
@@ -38,7 +38,7 @@ for idx, article in enumerate(articles):
             keywords = [output]  # fallback
 
     except Exception as e:
-        print(f"❌ Failed to process article '{title}': {e}")
+        print(f"Failed to process article '{title}': {e}")
         keywords = []
 
     results.append({
