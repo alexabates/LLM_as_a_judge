@@ -13,7 +13,7 @@ for idx, article in enumerate(articles):
     date = article.get('publish_date', 'Unknown')
     
     if not content.strip():
-        print(f"⚠️ Skipping article {idx+1} (no content)")
+        print(f"Skipping article {idx+1} (no content)")
         continue
 
     print(f"Extracting keywords from: {title[:50]}...")
@@ -43,6 +43,7 @@ for idx, article in enumerate(articles):
 
     results.append({
         'title': title,
+        'idx' : idx, 
         'publish_date': date,
         'keywords': keywords
     })
